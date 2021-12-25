@@ -1,6 +1,8 @@
+import time
+
 import boto3
 import botocore
-import time
+
 
 def get_stack_status(stack_name, region='us-east-1'):
     client = boto3.client('cloudformation', region_name=region)
@@ -89,6 +91,6 @@ def delete_stack(stack_name, region='us-east-1'):
     return response
 
 if __name__ == '__main__':
-    template_path = './Test_VPC.yaml'
+    template_path = 'Test_VPC.yaml'
     stack_name = 'TestVPC'
     print(create_update_cf(stack_name, template_path))
