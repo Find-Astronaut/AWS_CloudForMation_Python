@@ -90,6 +90,6 @@ def delete_stack(stack_name, region='us-east-1'):
     return response
 
 if __name__ == '__main__':
-    template_path = 'Test_VPC.yaml'
+    template_path = 'AWS_VPC.yaml'
     stack_name = 'TestVPC'
     print(create_update_cf(stack_name, template_path))
