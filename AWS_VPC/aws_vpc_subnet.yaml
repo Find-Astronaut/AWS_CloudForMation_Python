@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Subnet
+Resources:
+  mySubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId:
+        !Sub "${AWS::StackName}-VPCID"
+      CidrBlock: 30.1.2.0/24
+      AvailabilityZone: "us-east-1a"
+      Tags:
+        - Key: name
+          Value: EX_Subnet_01
